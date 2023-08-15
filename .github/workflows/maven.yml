@@ -35,6 +35,12 @@ jobs:
     - name: staging
       run: mkdir staging && cp pom.xml staging
 
+    - name: maven-settings
+      uses: s4u/maven-settings-action@v2.8.0
+      with:
+        servers: '[{"id": "github", "username": "dummy", "password": "${MAVEN_WRITE_PACKAGES}"}]'
+        githubServer: false
+
     - name: upload-artifact
       run: mvn --batch-mode deploy
       env:
