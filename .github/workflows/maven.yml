@@ -22,7 +22,8 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: maven
+        cache: 'maven'
+
     - name: maven
       run: mvn -B --update-snapshots package
     - name: staging
