@@ -30,12 +30,12 @@ jobs:
           ${{ runner.os }}-maven-
 
     - name: maven
-      run: mvn -B --update-snapshots package
+      run: mvn --batch-mode --update-snapshots package
 
     - name: staging
       run: mkdir staging && cp pom.xml staging
 
     - name: upload-artifact
-      run: mvn -B deploy
+      run: mvn --batch-mode -DuseGitHubPackages=true deploy
       env:
         GITHUB_TOKEN: ${{ secrets.MAVEN_WRITE_PACKAGES }}
