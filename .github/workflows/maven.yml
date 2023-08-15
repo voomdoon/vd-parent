@@ -24,7 +24,8 @@ jobs:
         distribution: 'temurin'
         cache: 'maven'
 
-    - uses: actions/cache@v1
+    - name: cache .m2/repository
+      uses: actions/cache@v1
       with:
         path: ~/.m2/repository
         key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
