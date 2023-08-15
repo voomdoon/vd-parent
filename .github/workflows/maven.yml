@@ -36,6 +36,6 @@ jobs:
       run: mkdir staging && cp pom.xml staging
 
     - name: upload-artifact
-      run: mvn --batch-mode -DuseGitHubPackages=true deploy
+      run: mvn --batch-mode deploy
       env:
         GITHUB_TOKEN: ${{ secrets.MAVEN_WRITE_PACKAGES }}
