@@ -38,7 +38,7 @@ jobs:
     - name: maven-settings
       uses: s4u/maven-settings-action@v2.8.0
       with:
-        servers: '[{"id": "github", "username": "voomdoon", "password": "${MAVEN_WRITE_PACKAGES}"}]'
+        servers: '[{"id": "github", "username": "voomdoon", "password": "${{ secrets.MAVEN_WRITE_PACKAGES }}"}]'
         githubServer: false
 
     - name: upload-artifact
