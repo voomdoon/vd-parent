@@ -1,5 +1,6 @@
 SET mypath=%~dp0
 SET mypath=%mypath:~0,-1%
+SET currentdir=%CD%
 
 CD %1
 	MKDIR "%1\.github"
@@ -9,4 +10,4 @@ CD %1
 				CALL powershell -Command "(gc .github\workflows\sonarcloud.yml) -replace 'PROJECT_ID', '%~n1' | Out-File -encoding utf8 .github\workflows\sonarcloud.yml"
 				CALL git add .github/workflows/sonarcloud.yml
 				CALL git commit -m "build(ci): update sonarcloud"
-CD %mypath%
+CD %currentdir%
