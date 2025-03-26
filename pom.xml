@@ -5,15 +5,14 @@
 
 	<groupId>de.voomdoon</groupId>
 	<artifactId>vd-parent</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+	<version>0.2.0-SNAPSHOT</version>
 
 	<packaging>pom</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java-version>17</java-version>
-		<maven.compiler.source>17</maven.compiler.source>
-		<maven.compiler.target>17</maven.compiler.target>
+		<maven.compiler.source>21</maven.compiler.source>
+		<maven.compiler.target>21</maven.compiler.target>
 
 		<sonar.organization>voomdoon</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
@@ -30,17 +29,6 @@
 	<build>
 	<!-- TODO upgrade -->
 		<plugins>
-			<!-- + + + + + compiling + + + + + -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.14.0</version>
-				<configuration>
-					<source>${java-version}</source>
-					<target>${java-version}</target>
-				</configuration>
-			</plugin>
-
 			<!-- + + + + + testing + + + + + -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
