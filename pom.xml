@@ -43,6 +43,7 @@
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
 		<skipTestJar>true</skipTestJar>
+		<gpg.skip>true</gpg.skip>
 	</properties>
 
 	<distributionManagement>
@@ -134,6 +135,9 @@
 						<goals>
 							<goal>sign</goal>
 						</goals>
+						<configuration>
+							<skip>${gpg.skip}</skip>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
