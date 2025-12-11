@@ -47,6 +47,7 @@
 					</dependency>
 				</dependencies>
 			</plugin>
+			<!-- - - - - - testing - - - - - -->
 
 			<!-- + + + + + building + + + + + -->
 			<plugin>
@@ -79,14 +80,7 @@
 					</execution>
 				</executions>
 			</plugin>
+			<!-- - - - - - building - - - - - -->
 		</plugins>
 	</build>
-
-	<distributionManagement>
-		<repository>
-			<id>github</id>
-			<url>https://maven.pkg.github.com/voomdoon/maven-packages</url>
-			<uniqueVersion>false</uniqueVersion>
-		</repository>
-	</distributionManagement>
 </project>
