@@ -11,6 +11,7 @@
 	
 	<name>vd-parent</name>
 	<description>parent module for all voomdoon modules</description>
+    <url>https://github.com/voomdoon/vd-parent</url>
 
 	<licenses>
 		<license>
@@ -19,6 +20,19 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
+
+	<developers>
+		<developer>
+			<name>André Schulz</name>
+		</developer>
+	</developers>
+
+	<scm>
+		<url>https://github.com/voomdoon/vd-parent</url>
+		<connection>scm:git:https://github.com/voomdoon/vd-parent.git</connection>
+		<developerConnection>scm:git:git@github.com:voomdoon/vd-parent.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -31,11 +45,16 @@
 		<skipTestJar>true</skipTestJar>
 	</properties>
 
-	<developers>
-		<developer>
-			<name>André Schulz</name>
-		</developer>
-	</developers>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>central</id>
+			<url>https://central.sonatype.com/publish-snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>central</id>
+			<url>https://central.sonatype.com/publish</url>
+		</repository>
+	</distributionManagement>
 
 	<build>
 		<!-- TODO upgrade -->
