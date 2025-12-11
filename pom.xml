@@ -8,6 +8,17 @@
 	<version>0.2.0-SNAPSHOT</version>
 
 	<packaging>pom</packaging>
+	
+	<name>vd-parent</name>
+	<description>parent module for all voomdoon modules</description>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -27,7 +38,7 @@
 	</developers>
 
 	<build>
-	<!-- TODO upgrade -->
+		<!-- TODO upgrade -->
 		<plugins>
 			<!-- + + + + + testing + + + + + -->
 			<plugin>
