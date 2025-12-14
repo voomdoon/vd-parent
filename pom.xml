@@ -156,6 +156,7 @@
 						<version>3.0.1</version>
 						<configuration>
 							<tagNameFormat>@{project.version}</tagNameFormat>
+							<autoVersionSubmodules>true</autoVersionSubmodules>
 							<goals>deploy</goals>
 							<arguments>-Prelease</arguments>
 						</configuration>
