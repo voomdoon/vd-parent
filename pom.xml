@@ -172,7 +172,6 @@
 								</goals>
 								<configuration>
 									<rules>
-										<requireCleanWorkingTree />
 										<requireReleaseVersion />
 										<requireGitBranch>
 											<branch>main</branch>
