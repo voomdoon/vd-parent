@@ -3,7 +3,7 @@
 
 	<groupId>de.voomdoon</groupId>
 	<artifactId>vd-parent</artifactId>
-	<version>0.2.3-SNAPSHOT</version>
+	<version>0.2.3</version>
 
 	<packaging>pom</packaging>
 	
@@ -29,7 +29,7 @@
 		<url>https://github.com/voomdoon/vd-parent</url>
 		<connection>scm:git:https://github.com/voomdoon/vd-parent.git</connection>
 		<developerConnection>scm:git:git@github.com:voomdoon/vd-parent.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>0.2.3</tag>
 	</scm>
 
 	<properties>
