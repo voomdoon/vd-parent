@@ -173,9 +173,6 @@
 								<configuration>
 									<rules>
 										<requireReleaseVersion />
-										<requireGitBranch>
-											<branch>main</branch>
-										</requireGitBranch>
 									</rules>
 								</configuration>
 								<inherited>true</inherited>
