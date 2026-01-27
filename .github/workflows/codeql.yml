@@ -76,7 +76,7 @@ jobs:
 
       - name: Perform CodeQL Analysis
         if: >
-          matrix.language == 'java-kotlin' ||
+          matrix.language != 'java-kotlin' ||
           steps.detect.outputs.has_java == 'true'
         uses: github/codeql-action/analyze@19b2f06db2b6f5108140aeb04014ef02b648f789 # v4.31.11
         with:
