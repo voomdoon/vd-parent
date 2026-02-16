@@ -55,7 +55,6 @@
 	</distributionManagement>
 
 	<build>
-		<!-- TODO upgrade -->
 		<plugins>
 			<!-- + + + + + testing + + + + + -->
 			<plugin>
