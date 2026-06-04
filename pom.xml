@@ -87,6 +87,7 @@
 			<!-- - - - - - testing - - - - - -->
 
 			<!-- + + + + + building + + + + + -->
+			<!-- Pin default lifecycle plugins to avoid Maven plugin validation warnings in child modules. -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
