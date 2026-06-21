@@ -38,6 +38,8 @@
 		<maven.compiler.target>21</maven.compiler.target>
 		<!-- Default for Surefire's late @{argLine} expansion; profiles/plugins may append JVM args. -->
 		<argLine></argLine>
+		<!-- Opt-in Java agent hook for test dependencies such as Mockito inline mocking. -->
+		<mockito.agent.argLine></mockito.agent.argLine>
 
 		<sonar.organization>voomdoon</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
@@ -60,11 +62,24 @@
 		<plugins>
 			<!-- + + + + + testing + + + + + -->
 			<plugin>
+				<!-- Exposes dependency jar path properties for opt-in test JVM agents. -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.10.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>properties</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.5.6</version>
 				<configuration>
-					<argLine>@{argLine} -Xshare:off</argLine>
+					<argLine>@{argLine} ${mockito.agent.argLine} -Xshare:off</argLine>
 				</configuration>
 			</plugin>
 			<plugin>
