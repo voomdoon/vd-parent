@@ -3,7 +3,7 @@
 
 	<groupId>de.voomdoon</groupId>
 	<artifactId>vd-parent</artifactId>
-	<version>0.2.4-SNAPSHOT</version>
+	<version>0.2.4</version>
 
 	<packaging>pom</packaging>
 	
@@ -29,7 +29,7 @@
 		<url>https://github.com/voomdoon/vd-parent</url>
 		<connection>scm:git:https://github.com/voomdoon/vd-parent.git</connection>
 		<developerConnection>scm:git:git@github.com:voomdoon/vd-parent.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>0.2.4</tag>
 	</scm>
 
 	<properties>
@@ -37,9 +37,9 @@
 		<maven.compiler.source>21</maven.compiler.source>
 		<maven.compiler.target>21</maven.compiler.target>
 		<!-- Default for Surefire's late @{argLine} expansion; profiles/plugins may append JVM args. -->
-		<argLine></argLine>
+		<argLine />
 		<!-- Opt-in Java agent hook for test dependencies such as Mockito inline mocking. -->
-		<mockito.agent.argLine></mockito.agent.argLine>
+		<mockito.agent.argLine />
 
 		<sonar.organization>voomdoon</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
